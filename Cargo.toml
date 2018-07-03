@@ -1,0 +1,11 @@
+[package]
+name = "openzwave-rs"
+version = "0.1.0"
+authors = ["Wilfried Chauveau <ithinuel@gmail.com>"]
+
+[build-dependencies]
+cc = "1.0"
+
+[dependencies]
+libc = "0.2.42"
+ncurses = "5.86.0"
