@@ -249,7 +249,7 @@ impl fmt::Debug for ValueID {
 #[link(name = "stdc++")]
 extern "C" {}
 
-type Handler = Fn(&Notification) + 'static;
+type Handler = dyn Fn(&Notification) + 'static;
 
 unsafe extern "C" fn handler(n: *const Notification, ctx: *mut c_void) {
     let cbk = Box::from_raw(ctx as *mut Box<Handler>);
